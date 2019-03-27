@@ -1,7 +1,3 @@
-var array = [1,1,2,3,3,4,4,5,5,7,7,8,8];
-
-
-
 /*
 Question: Find the element that appears once in a sorted array where all other elements appear twice one after another. Find that element in 0(logn) complexity.
 
@@ -9,7 +5,6 @@ Example: Input:   arr[] = {1, 1, 3, 3, 4, 5, 5, 7, 7, 8, 8}
 
 Output:  4    
 */
-
 
 /*
 PLAN: Since we have a sorted array, let's use binary search to find the non-paired element. Using the mid element to tell us which side to go to. 
@@ -53,4 +48,7 @@ function findNonPair(array){
   }
   return array[low];
 }
+
+var array = [1,1,3,3,4,5,5,7,7,8,8];
+
 findNonPair(array);

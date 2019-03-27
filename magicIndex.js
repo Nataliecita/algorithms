@@ -15,23 +15,24 @@ function findMagicIndex(array){
   let middle;
   let magicIndex;
   
-  while(low< high){
+  while(low<= high){
     //get middle
     middle = (low + high) / 2;
 
-    if(array[middle] === middle){
-      magicIndex = middle;
-      break;
-      // check left
-    } else if(array[middle] > middle){
-      high = middle - 1;
-      // check right
-    } else if(array[middle] < middle){
+    if(array[middle] == middle){
+      return middle;
+    }
+    // check right
+    if(middle > array[middle]){
       low = middle + 1;
+      // check left
+    } else if(middle < array[middle]){
+      high = middle -1;
     }
   }
-  return magicIndex;
+  return null;
 }
+
 
 let array = [-2,0,2,4,8,10, 14 ];
 

@@ -13,11 +13,10 @@ function findMagicIndex(array){
   let low = 0;
   let high = array.length - 1;
   let middle;
-  let magicIndex;
   
   while(low<= high){
     //get middle
-    middle = (low + high) / 2;
+    middle = Math.floor((low + high) / 2);
 
     if(array[middle] == middle){
       return middle;
@@ -26,13 +25,12 @@ function findMagicIndex(array){
     if(middle > array[middle]){
       low = middle + 1;
       // check left
-    } else if(middle < array[middle]){
+    } else{
       high = middle -1;
     }
   }
-  return null;
+  return false;
 }
-
 
 let array = [-2,0,2,4,8,10, 14 ];
 

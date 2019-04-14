@@ -11,13 +11,13 @@ PLAN: Since we have a sorted array, let's use binary search to find the non-pair
 
  At even indexes the pair of elements should start, and odd indexes, the pair of elements should end.
 
- When mid is even, the paid would start therefore I will check my right side, else I (when the mid is an odd number) I will check my left side(ouput element lying on that side).
+ When mid is even, the pair would start therefore I will check my right side, else I (when the mid is an odd number) I will check my left side(ouput element lying on that side).
 */
 
 function findNonPair(array){
   var low = 0;
   var high = array.length - 1;
-  var mid = (low + high ) / 2;
+  var mid = Math.floor((low + high ) / 2);
 
   //while left pointer is less than right pointer
   while(low < high){
